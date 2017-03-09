@@ -63,7 +63,8 @@
     
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     Start up Vagrant 
-      - vagrant ssh
+      - vagrant up -> boot up system
+      - vagrant ssh -> login
       
     Get into correct directory
       - cd /vagrant
@@ -85,6 +86,22 @@
     
     
 ---- PC ------
+
+Download gitbash -> https://git-for-windows.github.io/
+ - Once installed, right click on specific folder -> Git Bash Here (Prompt will open) 
+  - Command shell now in specific directory
+    - pwd tells me which directory I am in
+   - enter -> vagrant init ubuntu/trusty64 ; vagrant up --provider virtualbox
+
+
+
+
+
+
+
+
+
+
     (Note: If this command doesn't work, log out and log back in.) 
     Enter two commands:
     - vagrant init ubuntu/trusty64   --> (if it is already there, after a few seconds it will notify "already exists")
