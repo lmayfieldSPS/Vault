@@ -6,6 +6,13 @@
 
 #Homebrew - https://brew.sh -> copy install Hombrew code and paste it in Terminal to install
 
+#composer - https://getcomposer.org/ install -> download -> copy paste in terminal to install (Note the install message for next step)
+  - php composer.phar -> verify outputs
+  ** Move composer to bin to avoid having to keep typing it out **
+    - take the message given: "Composer (version 1.4.0) successfully installed to: /Users/spsonline1/Desktop/composer.phar"
+    - enter the following: mv /Users/spsonline1/Desktop/composer.phar /usr/local/bin/composer
+    - enter to confirm it worked -> composer (should generate composer info) 
+
 
 ----------
 
