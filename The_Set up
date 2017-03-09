@@ -43,14 +43,29 @@
   
    - Vagrant https://www.vagrantup.com/ 
      - Download for your OS -> Install
+     (Take note of where it installs -> C:\HashiCorp\Vagrant\) (Take note of the vagrant box location. Could cause errors. 
+     For me C:Users\Lawrence worked. But C:Hashicorp\Vagrant did not)
 
 ------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
  SETTING UP THE VIRTUAL MACHINE
+ Download PHP7 from -> http://php.net/downloads.php 
+ PHP installation help -> 
+  - https://www.sitepoint.com/how-to-install-php-on-windows/
+  - http://php.net/manual/en/install.php
+ 
+ 
  
  ----   MAC ----
+    - Create a folder in which you want the virtual machine to exist
+        - In the folder -> vagrant up --provider virtualbox ->Updates and installs
+    - Go to folder and extract PHP7 files  (NEEDS VERIFICATION) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    Start up Vagrant 
     
+      - vagrant ssh
+      
     
     
     
@@ -58,8 +73,12 @@
     
     
 ---- PC ------
-    
-    
+    (Note: If this command doesn't work, log out and log back in.) 
+    Enter two commands:
+    - vagrant init ubuntu/trusty64   --> (if it is already there, after a few seconds it will notify "already exists")
+    - vagrant up --provider virtualbox -- (expect vagrant to start up / download /update) 
+    (You may receive an update message  'vagrant box update' to update) 
+   
     
     
     
