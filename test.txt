@@ -1,2 +1,5 @@
 
-Words words words
+# The Set up
+===================================================
+Text editor - https://atom.io/ 
+
