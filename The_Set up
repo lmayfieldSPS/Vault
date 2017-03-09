@@ -63,9 +63,21 @@
     
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     Start up Vagrant 
-    
       - vagrant ssh
       
+    Get into correct directory
+      - cd /vagrant
+      -ls -> to verify
+      - exit -> exit
+      - vagrant reload -> reload
+      -vagrant halt -> shut down
+      - vagrant up -> start up
+      
+      XXXX Course XXX- sh install.sh
+      
+      - Might ask for database password : Create one here
+      - Might need to open vagrant file  to set up ports. 
+        - Look for #config.vm.network "forwarded_port", guest: 80, host:8080"
     
     
     
