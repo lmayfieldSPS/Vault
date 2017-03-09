@@ -1,5 +1,14 @@
 
 # The Set up
 ===================================================
-Text editor - https://atom.io/ 
 
+# Text editor - https://atom.io/ 
+
+#Terminal 
+-- Mac --
+  - cmd + space -> terminal (Terminal opened) (Change settings if you want) 
+  - type pwd to find out where you are 
+    - ls to find list -> cd (name of folder) 
+      - cd -> next folder (upon destination) 
+      - clear -> to clear screen
+    
