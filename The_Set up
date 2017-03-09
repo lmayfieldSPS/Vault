@@ -3,6 +3,10 @@
 ===================================================
 
 # Text editor - https://atom.io/ 
+
+#Homebrew - https://brew.sh -> copy install Hombrew code and paste it in Terminal to install
+
+
 ----------
 
 -- Mac --
@@ -112,8 +116,19 @@ Download gitbash -> https://git-for-windows.github.io/
     
     
     
+ ===============================================================================================================================
+                                              PHP 7 Installation
+===============================================================================================================================   
     
     
+    
+    -- MAC --
+    -install homebrew (if not installed) 
+        - brew help (to verify) 
+    - php -v to see current version of PHP
+    - brew search php7 (to see a large list of options) -> find homebrew/php/php70
+    - Install -> brew install homebrew/php/php70
+      - php -v to verify. If not updated, verify in a new window. 
     
     
     
