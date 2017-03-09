@@ -3,12 +3,22 @@
 ===================================================
 
 # Text editor - https://atom.io/ 
+----------
 
-#Terminal 
 -- Mac --
+#Terminal 
   - cmd + space -> terminal (Terminal opened) (Change settings if you want) 
   - type pwd to find out where you are 
-    - ls to find list -> cd (name of folder) 
+    - (get to where you need to go)  ls to find list -> cd (name of folder) 
       - cd -> next folder (upon destination) 
-      - clear -> to clear screen
-    
+      - clear (cntrl + s) -> to clear screen
+      
+------
+
+-- Windows --
+# CMD prompt 
+  - search and enter "cmd"
+  - cd enter -> reveals current directory
+  - dir to look at files (ls on mac) 
+  - To change dir - cd (name of dir)   
+
