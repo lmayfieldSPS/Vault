@@ -56,6 +56,17 @@
      - Download for your OS -> Install
      (Take note of where it installs -> C:\HashiCorp\Vagrant\) (Take note of the vagrant box location. Could cause errors. 
      For me C:Users\Lawrence worked. But C:Hashicorp\Vagrant did not)
+     
+     
+  Step 3
+  
+    - Homestead - http://laravel.com/docs/homestead
+    
+     
+
+
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
