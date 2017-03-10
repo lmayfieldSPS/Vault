@@ -143,6 +143,9 @@ Basic Vagrant Commands:
 Install Reference - https://www.sitepoint.com/getting-started-vagrant-windows/
 https://www.vagrantup.com/docs/cli/init.html
 http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+    - Install -> localhost / 2222
+        - Username: Vagrant
+        - Password: Vagrant
 
 Download gitbash -> https://git-for-windows.github.io/
  - Once installed, right click on specific folder -> Git Bash Here (Prompt will open) 
