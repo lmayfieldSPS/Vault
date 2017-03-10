@@ -76,6 +76,8 @@
  PHP installation help -> 
   - https://www.sitepoint.com/how-to-install-php-on-windows/
   - http://php.net/manual/en/install.php
+  
+----------------------------------------------------------------------------------------
 
 Basic Vagrant Commands:
 - pwd -> sees where you are
@@ -85,6 +87,24 @@ Basic Vagrant Commands:
 - ssh -l vagrant -p 2222 localhost / password  -> log into vagrant
 - logout or exit -> logs out of connection
 - shut vagrant down (be in vagrant folder)-> vagrant halt
+
+- Create a file 
+    - vi (vim) index.html 
+      - User taken to editor. 
+        - type 'i' for insert mode. 
+         - esc to stop typing.
+         - o -> next line
+         - w/ cursor over, x to delete.
+         - u -> undo
+         - dd -> delete whole line
+         - :wq (cursor at bottom, write, quit) -> save the file. 
+
+
+
+
+
+
+
 
  
  
