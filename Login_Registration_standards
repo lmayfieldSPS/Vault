@@ -33,6 +33,25 @@ function myAutoloader($className)      // It will pass the class name. Example $
 
 The importance of naming the classes. "User.class.php"
 
+Example: 
+
+spl_autoload_register('myAutoloader');
+
+/**
+ * Autoloader
+ *
+ * @param string $className  The name of the class
+ * @return void
+ */
+function myAutoloader($className)
+{
+  require dirname(dirname(__FILE__)) . '/classes/' . $className . '.class.php';
+  
+  and appears in index.php like: 
+  
+  // Initialisation
+require_once('includes/init.php');
+
 
 
 
