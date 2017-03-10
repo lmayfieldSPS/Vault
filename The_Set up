@@ -76,7 +76,16 @@
  PHP installation help -> 
   - https://www.sitepoint.com/how-to-install-php-on-windows/
   - http://php.net/manual/en/install.php
- 
+
+Basic Vagrant Commands:
+- pwd -> sees where you are
+- cd /location -> to go where you want to go
+- cd.. -> goes back
+- vagrant up -> starts up vagrant
+- ssh -l vagrant -p 2222 localhost / password  -> log into vagrant
+- logout or exit -> logs out of connection
+- shut vagrant down (be in vagrant folder)-> vagrant halt
+
  
  
  ----   MAC ----
