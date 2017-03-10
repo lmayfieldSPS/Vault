@@ -1,0 +1,32 @@
+
+==============   Basic Understanding  =========================
+
+# Class Files 
+
+- Good practice to define each class in a separate file. Generally with the 
+name containing class -
+- Image.class.php
+- User.class.php
+
+-----------------------
+
+- Before using a class, you MUST require it - 
+example:
+<?php
+require('User.class.php');
+$user = new User();
+
+---------------
+
+Autoloading Classes 
+- It can be overwhelming to have too many require's. Autoloading solves it. 
+When a script tries to use an undefined class, it throws an exception. We can solve this by
+having php execute a function that runs before the execption, to load that class. 
+Example:
+
+spl_autoload_register('myAutoloader');
+
+function myAutoloader($className)
+{
+  require($className. '.class.php');
+}
