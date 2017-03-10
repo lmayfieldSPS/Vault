@@ -24,9 +24,25 @@ When a script tries to use an undefined class, it throws an exception. We can so
 having php execute a function that runs before the execption, to load that class. 
 Example:
 
-spl_autoload_register('myAutoloader');
+spl_autoload_register('myAutoloader');  // This is the autoloader. It runs upon undefined classes
 
-function myAutoloader($className)
+function myAutoloader($className)      // It will pass the class name. Example $user = new User();  
 {
-  require($className. '.class.php');
+  require($className. '.class.php');   // this takes 'User' + .class.php and defines it. 
 }
+
+The importance of naming the classes. "User.class.php"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
