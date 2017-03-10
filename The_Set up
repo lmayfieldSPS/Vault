@@ -77,6 +77,8 @@
   - https://www.sitepoint.com/how-to-install-php-on-windows/
   - http://php.net/manual/en/install.php
   
+  Vagrant references:
+  - http://tech.osteel.me/posts/2015/01/25/how-to-use-vagrant-for-local-web-development.html
 ----------------------------------------------------------------------------------------
 
 Basic Vagrant Commands:
