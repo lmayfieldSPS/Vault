@@ -1,0 +1,83 @@
+First things first, we need to make sure you have the proper dev set up.
+
+Nowadays, the traditional workflow is:
+Work on local dev environment or controlled dev server
+Push to testing server
+QA
+Upon approval make pull request to merge into master
+Code Review
+Merge into master and release
+
+You can see how to set up a working environment here:
+https://laracasts.com/series/setup-a-mac-dev-machine-from-scratch
+
+There will be some additional steps during set up if you are working on a PC (windows).
+
+You should have 
+Virtual Box
+Vagrant
+Laravel Homestead (optional but it has EVERYTHING)
+Iterm or gitbash as a CLI
+Text editor of your choice. (Sublime and Atom seem to be popular editors)
+
+
+A good resource for learning php:
+http://www.phptherightway.com/
+
+Most of the top php contributors all contributed to this site and put together all their shared knowledge. I highly recommend following standards in this site.
+
+Set up GIT on your local dev environment and learn how to create a repository on our bitbucket account or your own github account.
+
+LEarn basic git command like 
+	Git add
+	Git commit
+	Git status
+	Git log
+
+Everything being learned should be saved on a file and push to a repository for code review.
+
+Create a repository on team bitbucket with the repository name of sps-law-php
+Create your own branch named : lmayfield or w/e you want
+When you are at a stopping point, commit and push your edits to your git branch. We will then make a pull request and that is where we will do code reviews.
+
+Below are the basic php things I’d like you to learn. Please provide an example for each of these things listed or any additional learnings. Comment everything in code for easier code readability.
+
+PHP
+
+Things to initially learn:
+
+Creating and updating variables
+Unsetting variables as well
+Changing values of variables and assigning back to the variable
+Creating strings
+Storing strings to a variable
+Add more to a string or concat  strings
+Combining variables that represent different strings with each other to make one string
+Operators
+Basic mathematical equations
+Less than vs greater than
+Learn different symbols of operators
+Learn when  to use AND or OR
+Arrays
+Creating empty arrays
+Storing items in arrays
+Associative arrays
+Removing and adding items to arrays (pop, unshift, shift..etc)
+Converting a string into an array or vice versa
+Combining arrays
+Different ways of referencing array keys, values or both key-value pair
+Conditions
+Basic if/else structures
+If/elseif/else
+Learn the difference between switch cases and if/else conditions
+Defensive programming in php
+Learn what try/catch is.
+Ternary conditions / operators
+Loops
+Foreach loops (with and without key)
+For loops
+do/while loops
+While loop
+When should you use loops?
+Read up on using loops when accessing a DB.
+
