@@ -60,6 +60,25 @@ Basics #1
 
 ======================================================================
 
+// functions and conditions
+
+// Basic function
+/*
+  function greet($greeting, $name='Poops'){
+    echo strtoupper($greeting . $name);
+  }
+greet('Whats up','Lawrence');
+*/
+
+// If statements
+  $num = 10;
+
+  if($num == 10){
+    echo 'You win';
+  }else{
+    echo "you suck";
+  }
+
 
 
 
