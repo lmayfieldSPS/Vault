@@ -1,0 +1,97 @@
+Basics #1
+
+<?php
+    //echo 'It works'; // Overall test
+    //$var1 = "Hello"; // var test 1
+    //$var2 = "world"; // var test 2
+    //echo $var1 .' '. $var2; // concatinating both Variables
+
+    /*
+    // Arrays
+    // $numbers = array(12, 44, 54, 77, 89); //Format 1
+    $numbers = [12,33,99,66,55,7678]; //Format 2
+      echo $numbers; //Will produce Error
+      //print_r($numbers); //will print the array
+      echo $numbers[0];
+      print_r ($numbers);
+
+
+    // Associative Arrays
+
+    $ages = array(
+      'john' => 35,
+      'mary' => 33,
+      'bob' => 78
+    );
+
+  // echo $ages['mary']; // displays the array value
+
+  // echo count($ages); // counts total array items
+  // echo array_pop($ages); // eliminates the last element in the array
+  */
+
+  // For loop
+  //  Cond1: Declare variable / Cond2: declare function / Cond3: Do this
+  for($i=0; $i < 5; $i++){
+    echo $i;
+  }
+
+// While loop
+
+  $i=0; // You have to declare the variable outside of the loop
+  while($i <= 10){
+    echo "number " . $i. '<br />';
+    $i++;
+  }
+
+
+// For each loop - strictly used for arrays
+    $numbers = array(12, 44, 54, 77, 89);
+    $ages = array(
+      'john' => 35,
+      'mary' => 33,
+      'bob' => 78
+    );
+
+    foreach ($ages as $name => $age) {
+      echo 'The age of ' . $name.  ' is ' . $age . '<br />';
+    }
+
+
+======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
