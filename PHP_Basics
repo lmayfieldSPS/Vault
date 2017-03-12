@@ -107,11 +107,17 @@ To call a method / function:
 <?php $user->register(); ?>
 
 
+Abstract Classes:
 
+abstract class SomeClass{
+    abstract public function someFunction(){    
+    }
+}
+// cant be instantiated and used directly
+// Must be extended by another class
+// If property or method is abstract, then the class also MUST be abstract.
 
-
-
-
+================== Classes and Methods =============================
 
 
 
