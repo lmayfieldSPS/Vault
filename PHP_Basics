@@ -79,14 +79,32 @@ greet('Whats up','Lawrence');
     echo "you suck";
   }
 
+=======================================================
 
+OOP
 
+Visibility:
 
+- Public: accessable outside of class
+- Protected: accessible in class and any extended classes
+-private - access only in owner class
 
+Inheritance: 
+- classes can extend to a child class
+- child classes have access to all parent properties unless private
+- Syntax: 
+    Class ChildClass extends ParentClass{
+    XXXX
+    }
 
-
-
-
+To create instance:
+    $user = new User;
+    
+To Print Property:
+    <?php echo $user->firstName;?>
+    
+To call a method / function:
+<?php $user->register(); ?>
 
 
 
