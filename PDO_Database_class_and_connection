@@ -1,0 +1,11 @@
+http://php.net/manual/en/book.pdo.php
+reference Mysql: https://www.ostraining.com/blog/coding/error-1045-phpmyadmin/ 
+
+Creating database (catered for example CRUD)
+1) phpmyadmin -> Database -> created Database -> #name
+2) enter table name and columns. Example is posts / 7 -> go
+3) col_1 /  id -> make sure A_I (auto increment is checked) & the primary key
+col_2 / title -> VARCHAR / 255 length
+col_3 / text -> TEXT / 
+col_4 / create_date -> DATETIME  / Default = CURRENT_TIMESTAMP
+        --SAVE--
