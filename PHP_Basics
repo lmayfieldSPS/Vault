@@ -152,6 +152,7 @@ use 'self::'
 
 // Abstract class and methods
 - You can't instantiate from, only extend. Meant to be source. 
+- If you have an abstract method inside of a class, then the class has to be abstract. 
 
 
 
