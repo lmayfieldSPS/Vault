@@ -128,14 +128,30 @@ Access Identifier:
 - Private
 - Protected
 
+Constructors 
+In class:
+    public function __constructor(){
+        echo 'constructor called';
+    }
+// These are triggered whent he class has been instantiated. 
+Bottom of class:
+ public function __destructor(){
+        echo 'destructor called';
+    }
+// This is called at the end
 
+To access another method from within the class use $this->
 
+=====================================================================
+Properties and modifiers
 
+// When referencing static properties or methods, you cannot use $this->, instead
+use 'self::'
 
+// With static properties, you dont have to instantiate. Just use scope Name::$xyz
 
-
-
-
+// Abstract class and methods
+- You can't instantiate from, only extend. Meant to be source. 
 
 
 
