@@ -119,6 +119,18 @@ abstract class SomeClass{
 
 ================== Classes and Methods =============================
 
+Two main things that go into a class are properties and methods.
+// Properties are attributes. Names, age, email, etc.
+// Methods are functions inside of a class
+
+Access Identifier:
+- Public
+- Private
+- Protected
+
+
+
+
 
 
 
