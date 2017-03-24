@@ -1,0 +1,32 @@
+<?php
+
+$f = "fizz";
+$b = "Buzz";
+$thr = 3;
+$fiv = 5;
+$fif = 15;
+
+
+
+
+for ($i=1; $i < 101; $i++) {
+
+// this is Fizzbuzz
+  if ($i % $thr ==  0 && $i % $fif == 0) {
+    echo $f . $b . "\n";
+  }
+// This is Buzz
+  elseif($i % $fiv == 0) {
+    echo $b . "\n";
+  }
+// This is fizz
+  elseif($i % $thr ==  0) {
+    echo $f . "\n";
+  }
+// This is count
+else {
+    echo $i . "\n";
+  }
+}
+
+?>
