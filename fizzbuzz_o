@@ -1,0 +1,60 @@
+<?php
+
+class Fizzbuzz{
+
+
+  public  function genfizzbuzz($val1, $val2, $val3=15){
+        for ($count=1; $count < 101 ; $count++) {
+
+            if ($count % 15 ==0)
+              {
+              echo $val1 . $val2 . "<br />";
+
+              }
+
+          elseif ($count % 5 ==0)
+              {
+            echo $val2 . "<br />";
+
+              }
+
+          elseif ($count % 3 ==0){
+            echo $val1 . "<br />";
+
+              }
+          else{
+            echo $count . "<br />";
+
+          }
+
+        }
+    }
+}
+
+
+Class Buttslam extends Fizzbuzz{
+
+}
+
+$buttjam = new Buttslam;
+
+echo $buttjam->genfizzbuzz("fizz","buzz");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ?>
