@@ -39,22 +39,3 @@ Class Buttslam extends Fizzbuzz{
 $buttjam = new Buttslam;
 
 echo $buttjam->genfizzbuzz("fizz","buzz");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>
