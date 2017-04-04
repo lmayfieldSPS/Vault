@@ -16,3 +16,17 @@ function centuryFromYear($year) {
 
 
 ----------------------------------------------------------------------------
+
+#2 Given the string, check if it is a palindrome.
+function checkPalindrome($inputString) {
+$rev = strrev($inputString);
+    
+    if (strcmp($inputString,$rev) !==0) {
+        return false;
+    } elseif (strcmp($inputString,$rev) == 0) {
+        return true;
+    }else {
+        return null;
+    }
+}
+
