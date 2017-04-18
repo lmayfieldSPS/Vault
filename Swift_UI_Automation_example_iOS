@@ -1,0 +1,130 @@
+import XCTest
+private let kTestEmail = ""
+class testEssentialsUI: XCTestCase {
+let app = XCUIApplication()
+    
+    override func setUp() {
+        super.setUp()
+        
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        // In UI tests it is usually best to stop immediately when a failure occurs.
+        continueAfterFailure = false
+        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+        XCUIApplication().launch()
+        
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func testLoginFail() {
+        
+        /* TEST - verify that the inputting the wrong info provides correct error messages */
+        
+       /* ////////////// Base login Begin /////////////// */
+        
+        // FRONT END - Verify that login options are available
+        let loginButton = app.buttons["Login"]
+        let createButton = app.buttons["Create Account"]
+        XCTAssertTrue(loginButton.exists, "Login Button should exist")
+        XCTAssertTrue(createButton.exists, "Create account button should exist")
+        app.buttons["Login"].tap()
+        
+        // LOGIN PAGE - Verify Login Page exists
+        let emailInput = app.textFields["email"]
+        let passwordInput = app.secureTextFields["password"]
+        XCTAssertTrue(emailInput.exists, "Email input should exist")
+        XCTAssertTrue(passwordInput.exists, "Password input should exist")
+        
+        /* ///////////// Base login End /////////////// */
+/* /////////////    Verify all login errors ///////////////  */
+        
+        // Login Test - Submit nothing
+        
+        app.textFields["email"].tap()
+        app.textFields["email"].typeText("")
+        app.secureTextFields["password"].tap()
+        app.secureTextFields["password"].typeText("")
+        app.buttons["Login"].tap()
+        XCTAssertNil(nil, "This should return Nil")
+// Login Test - Submit just email
+        
+        app.textFields["email"].tap()
+        app.textFields["email"].typeText("lawrencemayfield@hotmail.com")
+        app.secureTextFields["password"].tap()
+        app.secureTextFields["password"].typeText("")
+        app.buttons["Login"].tap()
+        XCTAssertNil(nil, "This should return Nil")
+// Login Test - Submit just password
+        
+         let emailTextField = app.tables.children(matching: .cell).element(boundBy: 0).children(matching: .textField).element
+         let selectAllMenuItem = app/*@START_MENU_TOKEN@*/.menus.menuItems["Select All"]/*[[".menus.menuItems[\"Select All\"]",".menuItems[\"Select All\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        
+        emailTextField.tap()
+        emailTextField.tap()
+        selectAllMenuItem.tap()
+        emailTextField.typeText(XCUIKeyboardKeyDelete)
+        app.secureTextFields["password"].tap()
+        app.secureTextFields["password"].typeText("453gfgtrete")
+        app.buttons["Login"].tap()
+        XCTAssertNil(nil, "This should return Nil")
+// Login Test - Submit incorrect email and incorrect password
+        
+        app.textFields["email"].tap()
+        app.textFields["email"].typeText("poopoopeepee@hotmail.com")
+        app.buttons["Login"].tap()
+        
+        let errorMessage = app.staticTexts["An Error Occured"]
+        let errorOK = app.buttons["OK"]
+        
+        XCTAssertTrue(errorMessage.exists, "Error message does not pop up")
+        XCTAssertTrue(errorOK.exists, "Error confirmation does not exist")
+        
+        errorOK.tap()
+    
+        }
+func testLoginLogOut() {
+// Verify that login button functions
+        let loginButton = app.buttons["Login"]
+        let createButton = app.buttons["Create Account"]
+        XCTAssertTrue(loginButton.exists, "Login Button should exist")
+        XCTAssertTrue(createButton.exists, "Create account button should exist")
+        app.buttons["Login"].tap()
+        
+        // Verify users are taken to Login Page\
+        let emailInput = app.textFields["email"]
+        let passwordInput = app.secureTextFields["password"]
+        XCTAssertTrue(emailInput.exists, "Email input should exist")
+        XCTAssertTrue(passwordInput.exists, "Password input should exist")
+        
+        // Logging in
+        app.textFields["email"].tap()
+        app.textFields["email"].typeText("test@hotmail.com")
+        app.secureTextFields["password"].tap()
+        app.secureTextFields["password"].typeText("1234")
+        app.buttons["Login"].tap()
+// Clicking on the settings icon
+        let gearIcon = app.tabBars.children(matching: .button).element(boundBy: 3)
+        gearIcon.tap()
+        
+        // Verifying user is on settings page
+        let settingsTitle = app.staticTexts["Settings"]
+        XCTAssertTrue(settingsTitle.exists, "There is no settings page")
+//Logging out
+        let logout = app.buttons["Log Out"]
+        XCTAssertTrue(logout.exists, "Log out does not exist")
+        app.buttons["Log Out"].tap()
+        
+        //Loggin out confirmation
+        let confirmLogout = app.buttons["Log Out"]
+        XCTAssertTrue(confirmLogout.exists, "Confirm Log out does not exist")
+        app.cells.buttons["Log Out"].tap()
+        
+        // Verify user is returned to login screen
+        XCTAssertTrue(loginButton.exists, "Login Button should exist")
+    }
+}
