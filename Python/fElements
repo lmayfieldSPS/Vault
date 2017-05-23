@@ -1,0 +1,76 @@
+from selenium import webdriver
+
+# Element = input, div, table, *Teg*
+#Attribute = id, class, type, name, etc
+#value = attribute = --> "VALUE" <---
+#.//*[@id='name']
+
+
+
+
+
+class FindingElements():
+    url = "http://letskodeit.teachable.com/p/practice"
+
+
+    def fID(self):   #Find by ID
+        driver = webdriver.Firefox()
+        driver.get(FindingElements.url)
+        elementByID = driver.find_element_by_id("name")
+
+        if elementByID is not None:   #If the id is not false element (null)
+            print("We found the element")
+
+    def fName(self):   #Find by name
+        driver = webdriver.Firefox()
+        driver.get(FindingElements.url)
+        elementByName = driver.find_element_by_name("show-hide")
+
+        if elementByName is not None:
+            print("Name Element is found")
+
+    def fDynId(self): #Find element by Dynamic ID
+        # Yahoo.com -> alert Bell Notice has a dynamic ID
+        #Normal test will give NoSuchElementException: Unable to locate element. {method:"id", selector: "1234#"}
+        driver = webdriver.Firefox()
+        driver.get("https://www.yahoo.com/")
+        #STOP!!! Use any other means of location. Do not attempt to locate by ID if it is Dynamic.
+
+    def fXpth(self):
+        driver = webdriver.Firefox()
+        driver.get(FindingElements.url)
+        elemByXpth = driver.find_element_by_xpath("//*[@name='show-hide']")
+
+        if elemByXpth is not None:
+            print("We have found the Xpath element")
+
+    def fCss(self):
+        driver = webdriver.Firefox()
+        driver.get(FindingElements.url)
+        elemByCss = driver.find_element_by_css_selector("#displayed-text")
+
+        if elemByCss is not None:
+            print("CSS found")
+
+    def fLinkTxt(self):
+        #Link means anchor tags
+        driver = webdriver.Firefox()
+        driver.get(FindingElements.url)
+        elemByLinkTxt = driver.find_element_by_link_text("Login")
+
+        if elemByLinkTxt is not None:
+            print("Link txt found")
+
+    def fLinkParTxt(self):
+        driver = webdriver.Firefox()
+        driver.get(FindingElements.url)
+        elemByParLinkTxt = driver.find_element_by_partial_link_text("Up")
+
+        if elemByParLinkTxt is not None:
+            print("Partial Link Found")
+
+
+
+test = FindingElements()
+test.fLinkTxt()
+test.fLinkParTxt()
