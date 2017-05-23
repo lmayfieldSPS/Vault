@@ -1,0 +1,70 @@
+from selenium import webdriver
+
+from selenium.webdriver.common.by import By
+
+#CSS syntax tag[attribute='value']  (ex. input[id='displayed-text'])
+# or (#displayed-text) ->shortcut
+# or (input#display-text) -> if multiple to help locate
+
+#Class start with ./ ex .inputs.displayed-class
+
+class CssSelectors():
+
+    url = "http://letskodeit.teachable.com/p/practice"
+
+    # Using wildcards:
+    #  " ^ " -> Represent the starting text (gets all elements that starts with)
+    #  " $ " -> Represents the ending text ( gets all elements that ends with)
+    #  " * " -> Represents the text contained ( gets all elements that contains X)
+
+    # Syntax -> tag[attribute<special character>='value'] ex: input[class^='something']
+    # input[class^='thing']
+    # input[class$='ending']
+    #input[class*='anything']
+
+
+
+
+    def find1(self):
+
+
+        driver = webdriver.Firefox()
+        driver.get(CssSelectors.url)
+        count = driver.find_elements(By.CSS_SELECTOR, ".inputs")
+        total = len(count)
+
+        if count is not None:
+            print("Element detected")
+            if total == 5:
+                print("The count is complete: " + str(total) + " is the accurate number")
+
+            else:
+                print("The count is wrong. The total is " + str(total))
+
+
+
+    def fChildren(self):
+
+        '''
+        CSS finding a child with the > . Ex. fieldset>table or fieldset>input#name
+        
+        :return: 
+        '''
+
+        driver = webdriver.Firefox()
+        driver.get(CssSelectors.url)
+        child = driver.find_elements(By.CSS_SELECTOR, "fieldset>table")
+        child2 = driver.find_elements(By.CSS_SELECTOR, "fieldset>#product")
+
+        if child is not None:
+            print("We found the child.")
+        if child2 is not None:
+            print("We found the child.")
+        if child and child2 is not None:
+            print("We have found all of the children")
+
+
+test = CssSelectors()
+
+test.fChildren()
+
