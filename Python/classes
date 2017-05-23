@@ -1,0 +1,52 @@
+"""
+Understanding the class
+"""
+
+class Car(object):   #pass in object which is another class that this class can inherit
+
+    def __init__(self, make='Ford', year='2017', color='Black'):
+        '''
+        The init will take the arguments and initialize them (Not sure what this means) 
+        :param make: This is the make of the car
+        :param year: This is the year of the car
+        :param color: This is the color of the car
+        '''
+
+        #Self.Attribute is what we are naming the parameter passed. We can name it anything.
+        #The parameter on the right is what is passed into the method.
+        self.make = make
+        self.year = year
+        self.color = color
+
+    def display(self):
+        print("Make = ", self.make)
+        print("Year = ", self.year)
+        print("color = ", self.color)
+
+    def set_color(self, color='Black'):
+        self.color = color
+
+
+
+#This is an instance of the car class\
+class Bike(Car):
+
+    def __init__(self, wheels=2):
+        Car.__init__(self)     #This is important to add the call to the super class init
+        self.wheels = wheels
+
+    def wheeldisplay(self):
+        print("This vehicle has", self.wheels, "Wheels")
+
+
+
+
+#machine = Car("Ram", "2017", "Green")
+#machine.display()
+#machine.set_color("Blue") #changing the color to Blue
+#machine.display()
+
+chopper = Bike(2)
+chopper.wheeldisplay()
+chopper.set_color("pink")
+chopper.display()
