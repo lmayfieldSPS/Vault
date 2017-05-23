@@ -1,0 +1,63 @@
+"""
+Use this to understand basic exceptions
+https://docs.python.org/3/tutorial/errors.html#
+"""
+
+
+class exceptionTests():
+
+    def exceptionHandle(self):
+        try:
+                #should throw division error. Can't divide by zero or string
+                a = 10
+                b = 20
+                c = 0
+                e = "cat"
+                d = (a + b) / c     #Change c <--> e to see either exception error
+                print(d)
+        except ZeroDivisionError:
+            print("This is the division error shown here")
+        except TypeError:
+            print("this is the type error that is shown here")
+        # Advised to use just one exception
+
+
+    def exceptionFinallyElse(self):
+        try:
+                #should throw division error. Can't divide by zero or string
+                a = 10
+                b = 20
+                c = 0
+                e = "cat"
+                d = (a + b) / e    #Change c <--> e to see either exception error
+                print(d)
+        except:
+            print("This is the exception BLOCK")
+            raise Exception("This is the specific exception") #This is the preferred way to write exceptions
+        else:
+            print("This is the else block here")
+        finally:
+            print("Things have now been closed and cleaned up")
+
+
+    def practice(self):
+        car = {'make' : 1, 'model' : 1, 'year' : 1}
+
+        try:
+            print(car["make"])  #change this from any key to "color" to verify.
+        except:
+            raise Exception("There has been an error")
+        else:
+            print("Everything is great")
+        finally:
+            print("Everything is done")
+
+
+
+
+
+
+test = exceptionTests()
+#test.exceptionHandle()
+#test.exceptionFinallyElse()
+test.practice()
