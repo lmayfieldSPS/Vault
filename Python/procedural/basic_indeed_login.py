@@ -5,6 +5,10 @@ class IndeedLogin():
 
 
     def loginTest(self):
+        '''
+        This will test the failed login message. 
+        :return: 
+        '''
 
         #Starting up browser and going to URL
         url = "http://www.indeed.com"
