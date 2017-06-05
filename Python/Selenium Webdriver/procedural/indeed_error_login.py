@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 class IndeedLogin():
 
 
-    def loginTest(self):
+    def loginFailTest(self):
         '''
         This will test the failed login message. 
         :return: 
@@ -53,4 +53,4 @@ class IndeedLogin():
 
 
 test = IndeedLogin()
-test.loginTest()
+test.loginFailTest()
