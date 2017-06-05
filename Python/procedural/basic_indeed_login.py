@@ -33,16 +33,20 @@ class IndeedLogin():
         #Locate submit button and click
         submit = driver.find_element(By.XPATH, "//*[@id='loginform']/button")
 
-        driver.implicitly_wait(3)
+        if submit is not None:
+            try:
+                submit.click()
+                driver.implicitly_wait(3)
+                errorMessage = driver.find_element(By.XPATH, "//*[@id='signin_password_grp']/div")
+                print("Element found after submit was clicked")
+                driver.quit()
+            except:
+                print("Error message did not appear after submission")
+            finally:
+                driver.quit()
 
-        errorMessage = driver.find_element(By.LINK_TEXT, "Incorrect password or email address")
 
-        if errorMessage is not None:
-            print("Verified that sign in error functions properly")
-        else:
-            print("Sign in error has not appeared as expected")
 
-        quit()
 
 test = IndeedLogin()
 test.loginTest()
