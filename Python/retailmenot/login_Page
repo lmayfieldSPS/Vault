@@ -1,0 +1,70 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+
+
+class RetailMeNot_loginPage():
+
+    def __init__(self, driver):
+        self.driver = driver
+
+
+    def loginPageVerification(self):
+        """
+        Verify that test is being ran on the Login Page
+        :return:
+        """
+        try:
+            faceBookButton = self.driver.find_element(By.XPATH, "//button[@class='button-facebook js-fb-login-button']")
+            assert faceBookButton is not None
+            print("Login Page confirmed - PASS")
+        except Exception as e:
+            print('Page Verification Failed', format(e))
+
+    def empty_login(self):
+        """
+        This will verify the error messages users should receive upon submitting empty inputs
+        :return:
+        """
+
+        try:
+            login_submit_button = self.driver.find_element(By.XPATH, "//button[@class='button-primary']")
+            assert login_submit_button is not None
+            login_submit_button.click()
+
+            email_error_verification = self.driver.find_element(By.XPATH, "//div[@class='input-error email-msg']")
+            pw_error_verification = self.driver.find_element(By.XPATH, "//div[@class='input-error password-msg']")
+
+            assert email_error_verification and pw_error_verification is not None
+            print("Empty login errors verified - PASS")
+        except Exception as e:
+            print('Empty Login error Test Failed', format(e))
+
+    def normal_login_verification(self):
+        """
+        The very basic login in process
+        :return:
+        """
+
+        try:
+            email_input = self.driver.find_element(By.XPATH, "//input[@class='submit-required blur signup-email']")
+            email_input.send_keys("someemail@hotmail.com")
+
+            password_input = self.driver.find_element(By.NAME, "password")
+            password_input.send_keys("12345")
+            password_input.submit()
+
+            self.driver.implicitly_wait(10)
+            mainPage = self.driver.find_element(By.ID, "_pages/design_standards/homepage.hbs")
+
+            if mainPage is not None:
+                print("Login Successful - PASS")
+            else:
+                print("Main page was not reached. Test Failed.")
+        except Exception as e:
+            print("Normal Login verification Test Error", format(e))
+
+        finally:
+            print("TEST COMPLETE")
+            quit()
