@@ -1,0 +1,25 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from pages.retailMeNot import RetailMeNot_loginPage
+
+
+class Rmn_login_verification_test():
+
+    url = "https://www.retailmenot.com/login"
+
+    # Bring up Firefox Browser
+    driver = webdriver.Firefox()
+    driver.maximize_window()
+    driver.get(url)
+
+
+    # Various Login Page Tests
+    rmn = RetailMeNot_loginPage(driver)
+    rmn.loginPageVerification()
+    rmn.empty_login()
+    rmn.normal_login_verification()
+
+
+
+
+
