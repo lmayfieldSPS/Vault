@@ -1,4 +1,18 @@
 Set up notes:
+======  virtual environment ========
+Option 1) Anaconda -> conda create --name myEnv django
+Option 2) Get details for Jetbrains/Pycharm
+
+======= install Django =========
+1) pip install django
+
+===== create project ==========
+1) change directy into folder. 
+2) in IDE -> add folder directory if not done already. 
+3) Create project ->command line : "django-admin startproject SOMENAME (ex. first_project)
+4) CL: python manage.py runserver -> Verify that server has been spun up properly.
+
+
 
 
 
@@ -6,5 +20,13 @@ Set up notes:
 1) Go into the project folder / settings. 
 2) Look for the list called "INSTALLED_APPS". Add the name of app folder. Example "first_app" -> Save
 3) To verify -> python manage.py runserver -> if no errors, copy http://xxxx paste in browser. 
-  Should receive page message "It worked"
-4) CREATE A VIEW -> first_app -> views.py
+    Should receive page message "It worked"
+4) CREATE A VIEW -> first_app -> views.py -> import 'from django.http import HttpResponse'
+5) create a function(aka view) and pass an argument (request)(ex. def index(request):). 
+    Return HttpResponse("Whatever you want")
+6) To see this view on the server, you have to map the view to the URLS.py in the project file. 
+    Add your view file "from 'first_app import views"
+7) Find the  urlpatterns list. 
+    URL will have three arguments. regex,view address, name)(comma after)
+    -> url(r'^$',views.index, name='index'), 
+8) run server, verify your "Whatever you want" appeared. 
