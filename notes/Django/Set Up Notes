@@ -1,0 +1,10 @@
+Set up notes:
+
+
+
+============= Setting up a new Application ============
+1) Go into the project folder / settings. 
+2) Look for the list called "INSTALLED_APPS". Add the name of app folder. Example "first_app" -> Save
+3) To verify -> python manage.py runserver -> if no errors, copy http://xxxx paste in browser. 
+  Should receive page message "It worked"
+4) CREATE A VIEW -> first_app -> views.py
