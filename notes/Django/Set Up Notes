@@ -10,11 +10,8 @@ Option 2) Get details for Jetbrains/Pycharm
 1) change directy into folder. 
 2) in IDE -> add folder directory if not done already. 
 3) Create project ->command line : "django-admin startproject SOMENAME (ex. first_project)
-4) CL: python manage.py runserver -> Verify that server has been spun up properly.
-
-
-
-
+4) CL:CD into folder -> python manage.py runserver -> Verify that server has been spun up properly.
+5) Verify it worked when verifying ip address in browser
 
 ============= Setting up a new Application ============
 1) Go into the project folder / settings. 
