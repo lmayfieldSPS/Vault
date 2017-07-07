@@ -34,3 +34,43 @@ Option 2) Get details for Jetbrains/Pycharm
 8) run server, verify your "Whatever you want" appeared. 
 
 
+===== Template creation ====
+Set up: 
+    project
+           app
+    templates
+    
+1) Create Template folder - > app name folder
+2) Add Template dir to SETTINGS: Go to project settings -> (under Base_DIR) create -> 
+                                    TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+ 
+3) Scroll down, find TEMPLATES dictionary -> in DIRS list ->[TEMPLATE_DIR,]
+4) IN APP folder, created -> urls.py -> Inside urls.py
+            - from django.conf.urls import url
+            - from "appName" import views
+            
+            - Create list -> urlpatterns = [
+                        url(r'^$', views.someName, name='someName'), (ex. Help for the help page)
+                        
+5) Go into the project urls to connect the app urls. Find the urlpatterns.
+
+        - from django.conf.urls import include
+        - In the urlpatterns list add -> url(r'^someName/', include('appfolder.urls')),
+        
+6) appfolder -> views.py
+        from django.shortcuts import render
+        from django.http import HttpResponse
+        
+        - create someName method ->
+            def someName(request):
+            (create dictionary) -> someNamedict = {'someName_insert':'Something here'}
+            return render(request,'appfolder/someName.html')
+        
+
+            
+           
+        
+
+
+
+
