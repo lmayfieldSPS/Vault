@@ -13,13 +13,18 @@ Option 2) Get details for Jetbrains/Pycharm
 4) CL:CD into folder -> python manage.py runserver -> Verify that server has been spun up properly.
 5) Verify it worked when verifying ip address in browser
 
+
+===== Create a new App ==========
+1) cd into project folder -> python manage.py startapp "Name of app" (ex. first_app)
+2) Move onto setting up a new application section
+
 ============= Setting up a new Application ============
 1) Go into the project folder / settings. 
 2) Look for the list called "INSTALLED_APPS". Add the name of app folder. Example "first_app" -> Save
 3) To verify -> python manage.py runserver -> if no errors, copy http://xxxx paste in browser. 
     Should receive page message "It worked"
 4) CREATE A VIEW -> first_app -> views.py -> import 'from django.http import HttpResponse'
-5) create a function(aka view) and pass an argument (request)(ex. def index(request):). 
+ 5) create a function(aka view) and pass an argument (request)(ex. def index(request):). 
     Return HttpResponse("Whatever you want")
 6) To see this view on the server, you have to map the view to the URLS.py in the project file. 
     Add your view file "from 'first_app import views"
@@ -27,3 +32,5 @@ Option 2) Get details for Jetbrains/Pycharm
     URL will have three arguments. regex,view address, name)(comma after)
     -> url(r'^$',views.index, name='index'), 
 8) run server, verify your "Whatever you want" appeared. 
+
+
