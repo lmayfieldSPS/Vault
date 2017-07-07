@@ -64,8 +64,12 @@ Set up:
         - create someName method ->
             def someName(request):
             (create dictionary) -> someNamedict = {'someName_insert':'Something here'}
-            return render(request,'appfolder/someName.html')
+            return render(request,'appfolder/someName.html', context=someNamedict)
         
+ 7) create a new html file for #6 above. template/appfolder/someName.html
+    -> Set up the HTML
+    -> Find the key of the someNamedict dictionary (someName_insert)
+    - In the html, insert {{soneName_insert}}
 
             
            
